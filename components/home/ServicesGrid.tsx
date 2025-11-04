@@ -32,7 +32,7 @@ const services = [
   {
     icon: FaShieldAlt,
     title: 'GARANZIA 5 ANNI',
-    description: 'Sconti cucine ha scelto di garantire tutte le sue cucine per 5 anni con l\'obiettivo di fornire al proprio cliente la massima serenità e fiducia nell\'acquisto.',
+    description: "Sconti cucine ha scelto di garantire tutte le sue cucine per 5 anni con l'obiettivo di fornire al proprio cliente la massima serenità e fiducia nell'acquisto.",
   },
 ]
 

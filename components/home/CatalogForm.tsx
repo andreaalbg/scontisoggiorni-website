@@ -20,7 +20,7 @@ const CatalogForm = ({ variant = 'top' }: CatalogFormProps) => {
     e.preventDefault()
     // Handle form submission
     console.log('Form submitted:', formData)
-    alert('Grazie! Riceverai il catalogo all\'indirizzo email fornito.')
+    alert("Grazie! Riceverai il catalogo all'indirizzo email fornito.")
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

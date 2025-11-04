@@ -29,7 +29,7 @@ const slides = [
   {
     id: 4,
     title: 'RICHIEDI SUBITO IL TUO BUONO SCONTO',
-    description: 'Compilando il modulo contatti, subito per te un buono sconto di 1000 euro che potrai utilizzare per l\'acquisto della tua cucina in uno dei nostri punti vendita',
+    description: "Compilando il modulo contatti, subito per te un buono sconto di 1000 euro che potrai utilizzare per l'acquisto della tua cucina in uno dei nostri punti vendita",
     cta: 'SCOPRI DI PIÙ',
     bgGradient: 'from-primary-light/90 to-primary/90',
   },
