@@ -128,7 +128,7 @@ const CatalogForm = ({ variant = 'top' }: CatalogFormProps) => {
                   className="mt-1 w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary"
                 />
                 <span className="text-sm text-gray-700">
-                  <strong>Ho letto l'informativa privacy</strong> e acconsento al trattamento dei miei dati personali *
+                  <strong>Ho letto l&apos;informativa privacy</strong> e acconsento al trattamento dei miei dati personali *
                 </span>
               </label>
             </div>
