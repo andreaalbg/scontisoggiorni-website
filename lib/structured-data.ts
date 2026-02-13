@@ -3,10 +3,10 @@
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Sconti Cucine',
-  url: 'https://www.sconticucine.it',
-  logo: 'https://www.sconticucine.it/logo.png',
-  description: 'Cucine Made in Italy a prezzi scontati. Oltre 40 showroom in tutta Italia.',
+  name: 'Sconti Soggiorni',
+  url: 'https://www.scontisoggiorni.it',
+  logo: 'https://www.scontisoggiorni.it/logo.png',
+  description: 'Soggiorni e mobili living Made in Italy a prezzi scontati. Oltre 40 showroom in tutta Italia.',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'IT',
@@ -24,10 +24,10 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FurnitureStore',
-  name: 'Sconti Cucine',
-  image: 'https://www.sconticucine.it/og-image.jpg',
-  '@id': 'https://www.sconticucine.it',
-  url: 'https://www.sconticucine.it',
+  name: 'Sconti Soggiorni',
+  image: 'https://www.scontisoggiorni.it/og-image.jpg',
+  '@id': 'https://www.scontisoggiorni.it',
+  url: 'https://www.scontisoggiorni.it',
   telephone: '+39-xxx-xxx-xxxx',
   priceRange: '€€',
   address: {
@@ -62,17 +62,17 @@ export const localBusinessSchema = {
 export const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Cucine Made in Italy',
-  description: 'Cucine prestigiose Made in Italy a prezzi scontati',
+  name: 'Soggiorni Made in Italy',
+  description: 'Soggiorni e mobili living Made in Italy a prezzi scontati',
   brand: {
     '@type': 'Brand',
-    name: 'Sconti Cucine',
+    name: 'Sconti Soggiorni',
   },
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',
-    lowPrice: '2000',
-    highPrice: '15000',
+    lowPrice: '1500',
+    highPrice: '12000',
     offerCount: '100+',
   },
 }
@@ -83,10 +83,10 @@ export const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Quanto costa una cucina da Sconti Cucine?',
+      name: 'Quanto costa un soggiorno da Sconti Soggiorni?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Le nostre cucine Made in Italy partono da prezzi molto competitivi grazie ai nostri sconti fino al 45%. Offriamo anche un buono sconto di 1000€ per tutti i nuovi clienti.',
+        text: 'I nostri soggiorni Made in Italy partono da prezzi molto competitivi grazie ai nostri sconti fino al 45%. Offriamo anche un buono sconto di 1000€ per tutti i nuovi clienti.',
       },
     },
     {
@@ -94,7 +94,7 @@ export const faqSchema = {
       name: 'Il trasporto e montaggio sono inclusi?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sì, il trasporto e il montaggio della tua nuova cucina sono completamente inclusi nel prezzo. Inoltre, ci occupiamo anche dello smaltimento della tua vecchia cucina.',
+        text: 'Sì, il trasporto e il montaggio del tuo nuovo soggiorno sono completamente inclusi nel prezzo. Inoltre, ci occupiamo anche dello smaltimento dei tuoi vecchi mobili.',
       },
     },
     {
@@ -110,7 +110,7 @@ export const faqSchema = {
       name: 'Che garanzia offrite?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tutte le nostre cucine sono garantite 5 anni senza spese aggiuntive, per darti la massima serenità nel tuo acquisto.',
+        text: 'Tutti i nostri soggiorni e mobili living sono garantiti 5 anni senza spese aggiuntive, per darti la massima serenità nel tuo acquisto.',
       },
     },
   ],

@@ -1,135 +1,179 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { FaCouch, FaStar, FaTruck, FaShieldAlt } from 'react-icons/fa'
 
-const slides = [
-  {
-    id: 1,
-    title: 'OLTRE 40 MOSTRE ESPOSITIVE IN TUTTA ITALIA',
-    description: 'Compila il modulo contatti per sapere qual è la sede più vicina a te, vieni a trovarci. Numerose sorprese come un arredatore a te dedicato per il tempo che desideri',
-    cta: 'SCOPRI DI PIÙ',
-    image: '/images/hero-1.jpg',
-    bgGradient: 'from-primary/90 to-primary-dark/90',
-  },
-  {
-    id: 2,
-    title: 'CUCINE PRESTIGIOSE A PREZZI SCONTATI',
-    description: 'Vieni a scoprire la tua nuova cucina, fatta con materiali di prima qualità, MADE IN ITALY a prezzi da ingrosso nate da una attenta selezione con i migliori produttori',
-    cta: 'SCOPRI DI PIÙ',
-    image: '/images/hero-2.jpg',
-    bgGradient: 'from-secondary/90 to-secondary-dark/90',
-  },
-  {
-    id: 3,
-    title: "L'ALTA QUALITÀ DEL MADE IN ITALY A PREZZI ACCESSIBILI A TUTTI",
-    description: 'Siamo convinti che la manodopera degli artigiani Italiani sia un valore aggiunto per una cucina che deve avere standard elevati di qualità e robustezza. Collaboriamo solo con produttori ITALIANI!',
-    cta: 'SCOPRI DI PIÙ',
-    image: '/images/hero-3.jpg',
-    bgGradient: 'from-accent/90 to-accent-dark/90',
-  },
-  {
-    id: 4,
-    title: 'RICHIEDI SUBITO IL TUO BUONO SCONTO',
-    description: "Compilando il modulo contatti, subito per te un buono sconto di 1000 euro che potrai utilizzare per l'acquisto della tua cucina in uno dei nostri punti vendita",
-    cta: 'SCOPRI DI PIÙ',
-    image: '/images/hero-1.jpg',
-    bgGradient: 'from-primary-light/90 to-primary/90',
-  },
+const features = [
+  { icon: FaCouch, text: 'Design Esclusivo' },
+  { icon: FaStar, text: 'Made in Italy' },
+  { icon: FaTruck, text: 'Consegna Gratuita' },
+  { icon: FaShieldAlt, text: 'Garanzia 5 Anni' },
 ]
 
-const HeroCarousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+const HeroSection = () => {
+  const [activeImage, setActiveImage] = useState(0)
+  const images = ['/images/hero-1.jpg', '/images/hero-2.jpg', '/images/hero-3.jpg']
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
-
+      setActiveImage((prev) => (prev + 1) % images.length)
+    }, 4000)
     return () => clearInterval(timer)
-  }, [])
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index)
-  }
+  }, [images.length])
 
   return (
-    <section className="relative h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden mt-16">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7 }}
-          className="absolute inset-0"
-        >
-          {/* Background Image */}
-          <Image
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
-            fill
-            className="object-cover"
-            priority={currentSlide === 0}
-            quality={90}
-          />
-          
-          {/* Overlay Gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${slides[currentSlide].bgGradient}`} />
-
-          {/* Content */}
-          <div className="relative container-custom h-full flex items-center">
+    <section className="relative min-h-screen mt-16 overflow-hidden">
+      {/* Split Layout */}
+      <div className="flex flex-col lg:flex-row min-h-[calc(100vh-4rem)]">
+        {/* Left Side - Content */}
+        <div className="w-full lg:w-1/2 bg-gradient-to-br from-secondary via-secondary to-secondary-dark flex items-center py-16 lg:py-0">
+          <div className="container-custom lg:pl-12 xl:pl-20">
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="max-w-4xl"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight font-heading">
-                {slides[currentSlide].title}
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-2 bg-primary/20 text-primary-light px-4 py-2 rounded-full mb-6"
+              >
+                <FaStar className="text-accent" />
+                <span className="text-sm font-semibold uppercase tracking-wider">Oltre 40 Showroom in Italia</span>
+              </motion.div>
+
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight font-heading">
+                SOGGIORNI DI <span className="text-primary">DESIGN</span> A PREZZI INCREDIBILI
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-white/95 mb-8 max-w-3xl leading-relaxed">
-                {slides[currentSlide].description}
+
+              {/* Description */}
+              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+                Arreda il tuo living con mobili Made in Italy di alta qualità. 
+                Divani, librerie, mobili TV e complementi d&apos;arredo con sconti fino al <span className="text-primary font-bold">45%</span>.
               </p>
-              <Link href="#catalog">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-primary hover:bg-gray-100 font-bold py-4 px-10 rounded-full text-lg shadow-2xl transition-all duration-300"
-                >
-                  {slides[currentSlide].cta}
-                </motion.button>
-              </Link>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Link href="#catalog">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transition-all duration-300"
+                  >
+                    RICHIEDI IL CATALOGO
+                  </motion.button>
+                </Link>
+                <Link href="#stores">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
+                  >
+                    TROVA SHOWROOM
+                  </motion.button>
+                </Link>
+              </div>
+
+              {/* Feature Pills */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="grid grid-cols-2 gap-3"
+              >
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3"
+                  >
+                    <feature.icon className="text-primary text-xl" />
+                    <span className="text-white text-sm font-medium">{feature.text}</span>
+                  </div>
+                ))}
+              </motion.div>
             </motion.div>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </div>
 
-      {/* Navigation Dots */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-3 z-10">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index
-                ? 'bg-white w-10'
-                : 'bg-white/50 hover:bg-white/75'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+        {/* Right Side - Image Gallery */}
+        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+          {/* Main Image */}
+          {images.map((src, index) => (
+            <motion.div
+              key={src}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: activeImage === index ? 1 : 0 }}
+              transition={{ duration: 0.7 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={src}
+                alt={`Soggiorno di design ${index + 1}`}
+                fill
+                className="object-cover"
+                priority={index === 0}
+                quality={90}
+              />
+              {/* Subtle overlay */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-secondary/20" />
+            </motion.div>
+          ))}
 
-      {/* Slide Counter */}
-      <div className="absolute bottom-8 right-8 text-white font-semibold text-lg z-10">
-        <span className="text-2xl">{currentSlide + 1}</span> / {slides.length}
+          {/* Floating Discount Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="absolute top-8 right-8 bg-primary text-white rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-2xl z-10"
+          >
+            <span className="text-sm font-semibold">SCONTO</span>
+            <span className="text-3xl font-bold">-45%</span>
+          </motion.div>
+
+          {/* Promo Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl z-10"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-secondary font-bold text-lg">Buono Sconto Immediato</p>
+                <p className="text-gray-600">Compilando il modulo ricevi subito</p>
+              </div>
+              <div className="text-right">
+                <p className="text-primary font-bold text-3xl">1000&euro;</p>
+                <p className="text-gray-500 text-sm">di sconto</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Image Navigation Dots */}
+          <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveImage(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  activeImage === index ? 'bg-primary w-6' : 'bg-white/70 hover:bg-white'
+                }`}
+                aria-label={`Vai all'immagine ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
-export default HeroCarousel
+export default HeroSection
 
