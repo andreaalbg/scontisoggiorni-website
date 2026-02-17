@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Sconti Cucine - Cucine Su Misura Made in Italy',
-    short_name: 'ScontiCucine',
+    name: 'Atelier Cucine Moderne - Cucine Su Misura Made in Italy',
+    short_name: 'AtelierCucine',
     description: 'Cucine su misura Made in Italy a prezzi scontati. Oltre 40 showroom in Italia.',
     start_url: '/',
     display: 'standalone',

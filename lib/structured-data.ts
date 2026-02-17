@@ -3,9 +3,9 @@
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Sconti Cucine',
-  url: 'https://www.sconticucine.it',
-  logo: 'https://www.sconticucine.it/logo.png',
+  name: 'Atelier Cucine Moderne',
+  url: 'https://www.ateliercucinemoderne.it',
+  logo: 'https://www.ateliercucinemoderne.it/logo.png',
   description: 'Cucine su misura Made in Italy a prezzi scontati. Oltre 40 showroom in tutta Italia.',
   address: {
     '@type': 'PostalAddress',
@@ -24,10 +24,10 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'FurnitureStore',
-  name: 'Sconti Cucine',
-  image: 'https://www.sconticucine.it/og-image.jpg',
-  '@id': 'https://www.sconticucine.it',
-  url: 'https://www.sconticucine.it',
+  name: 'Atelier Cucine Moderne',
+  image: 'https://www.ateliercucinemoderne.it/og-image.jpg',
+  '@id': 'https://www.ateliercucinemoderne.it',
+  url: 'https://www.ateliercucinemoderne.it',
   telephone: '+39-xxx-xxx-xxxx',
   priceRange: '€€',
   address: {
@@ -66,7 +66,7 @@ export const productSchema = {
   description: 'Cucine su misura Made in Italy a prezzi scontati con progettazione 3D gratuita',
   brand: {
     '@type': 'Brand',
-    name: 'Sconti Cucine',
+    name: 'Atelier Cucine Moderne',
   },
   offers: {
     '@type': 'AggregateOffer',
@@ -83,7 +83,7 @@ export const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Quanto costa una cucina da Sconti Cucine?',
+      name: 'Quanto costa una cucina da Atelier Cucine Moderne?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Le nostre cucine su misura Made in Italy partono da prezzi molto competitivi grazie ai nostri sconti fino al 45%. Offriamo anche un extra sconto fino a 2000€ per tutti i nuovi clienti.',

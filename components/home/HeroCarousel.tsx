@@ -50,13 +50,13 @@ const HeroSection = () => {
 
               {/* Main Title */}
               <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight font-heading">
-                Arredare Casa è un&apos;<span className="text-primary">Emozione</span>
+                La Cucina dei Tuoi <span className="text-primary">Sogni</span>, Oggi Realtà
               </h1>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Progettiamo cucine su misura che rispecchiano il tuo stile. 
-                Con oltre 40 showroom in Italia, ti accompagniamo nella scelta della cucina perfetta con sconti fino al <span className="text-primary font-bold">45%</span>.
+                Creiamo cucine su misura Made in Italy, dove design e funzionalità si incontrano. 
+                Dalla progettazione 3D alla consegna, realizziamo il cuore della tua casa con sconti fino al <span className="text-primary font-bold">45%</span>.
               </p>
 
               {/* CTA Buttons */}
