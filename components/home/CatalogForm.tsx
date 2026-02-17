@@ -10,8 +10,8 @@ interface CatalogFormProps {
 }
 
 const perks = [
-  { icon: FaGift, text: 'Buono 1000€ incluso' },
-  { icon: FaTruck, text: 'Spedizione gratuita' },
+  { icon: FaGift, text: 'Extra sconto fino a 2.000€' },
+  { icon: FaTruck, text: 'Consegna e montaggio inclusi' },
   { icon: FaShieldAlt, text: 'Garanzia 5 anni' },
 ]
 
@@ -50,17 +50,17 @@ const CatalogForm = ({ variant = 'top' }: CatalogFormProps) => {
             className="text-center max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-heading">
-              Inizia a Progettare il Tuo Soggiorno Ideale
+              Richiedi il catalogo e ottieni un extra sconto fino a 2.000€
             </h2>
             <p className="text-white/90 text-lg mb-8">
-              Richiedi una consulenza gratuita con i nostri esperti. Riceverai il catalogo completo 
-              e un buono sconto di 1000€ da utilizzare nei nostri showroom.
+              Sfoglia le nostre collezioni di cucine e lasciati ispirare. 
+              Approfitta della promozione con finanziamento a interessi zero.
             </p>
             <a
               href="#catalog"
               className="inline-flex items-center gap-2 bg-white text-primary hover:bg-gray-100 font-bold py-4 px-10 rounded-full text-lg shadow-xl transition-all duration-300"
             >
-              Richiedi il Catalogo Gratuito
+              Richiedi Ora
             </a>
           </motion.div>
         </div>
@@ -81,9 +81,9 @@ const CatalogForm = ({ variant = 'top' }: CatalogFormProps) => {
             className="lg:col-span-2 relative"
           >
             <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image
+                <Image
                 src="/images/hero-3.jpg"
-                alt="Catalogo Soggiorni"
+                alt="Catalogo Cucine"
                 fill
                 className="object-cover"
               />
@@ -120,11 +120,11 @@ const CatalogForm = ({ variant = 'top' }: CatalogFormProps) => {
               Catalogo Gratuito
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4 leading-tight font-heading">
-              Ricevi il Catalogo <span className="text-primary">2026</span>
+              Richiedi il Catalogo e Ottieni l&apos;<span className="text-primary">Extra Sconto</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8">
-              Compila il modulo per ricevere il nostro catalogo completo con tutte le collezioni 
-              e un esclusivo buono sconto di 1000€.
+              Sfoglia le nostre collezioni di cucine e lasciati ispirare. Compila il modulo e ricevi 
+              subito il catalogo digitale con un extra sconto esclusivo fino a 2.000€ su tutto l&apos;arredo.
             </p>
 
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8">

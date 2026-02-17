@@ -21,26 +21,26 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'Sconti Soggiorni - Soggiorni e Living Made in Italy a Prezzi Scontati | Oltre 40 Showroom in Italia',
-  description: 'Scopri i migliori soggiorni e mobili living Made in Italy a prezzi scontati. Oltre 40 showroom in tutta Italia, arredatore dedicato, buono sconto da 1000€, trasporto e montaggio inclusi. Qualità italiana accessibile a tutti.',
-  keywords: ['soggiorni', 'soggiorni italiani', 'soggiorni scontati', 'soggiorni made in italy', 'arredamento soggiorno', 'showroom soggiorni', 'soggiorni moderni', 'mobili living', 'pareti attrezzate'],
-  authors: [{ name: 'Sconti Soggiorni' }],
-  creator: 'Sconti Soggiorni',
-  publisher: 'Sconti Soggiorni',
+  title: 'Sconti Cucine - Cucine Su Misura Made in Italy | Oltre 40 Showroom in Italia',
+  description: 'Scopri le migliori cucine su misura Made in Italy a prezzi scontati. Oltre 40 showroom in tutta Italia, progettazione 3D gratuita, rilievo misure a domicilio, extra sconto fino a 2000€, consegna e montaggio inclusi.',
+  keywords: ['cucine', 'cucine su misura', 'cucine italiane', 'cucine made in italy', 'cucine moderne', 'cucine classiche', 'showroom cucine', 'arredamento cucina', 'cucine scontate'],
+  authors: [{ name: 'Sconti Cucine' }],
+  creator: 'Sconti Cucine',
+  publisher: 'Sconti Cucine',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://www.scontisoggiorni.it'),
+  metadataBase: new URL('https://www.sconticucine.it'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Sconti Soggiorni - Soggiorni Made in Italy a Prezzi Scontati',
-    description: 'Oltre 40 showroom in Italia. Soggiorni e mobili living Made in Italy a prezzi da ingrosso. Arredatore dedicato, buono sconto 1000€, trasporto incluso.',
-    url: 'https://www.scontisoggiorni.it',
-    siteName: 'Sconti Soggiorni',
+    title: 'Sconti Cucine - Cucine Su Misura Made in Italy',
+    description: 'Oltre 40 showroom in Italia. Cucine su misura Made in Italy a prezzi da ingrosso. Progettazione 3D gratuita, extra sconto 2000€, consegna inclusa.',
+    url: 'https://www.sconticucine.it',
+    siteName: 'Sconti Cucine',
     locale: 'it_IT',
     type: 'website',
     images: [
@@ -48,14 +48,14 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Sconti Soggiorni - Soggiorni Made in Italy',
+        alt: 'Sconti Cucine - Cucine Made in Italy',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sconti Soggiorni - Soggiorni Made in Italy a Prezzi Scontati',
-    description: 'Oltre 40 showroom in Italia. Soggiorni e mobili living Made in Italy a prezzi accessibili.',
+    title: 'Sconti Cucine - Cucine Su Misura Made in Italy',
+    description: 'Oltre 40 showroom in Italia. Cucine su misura Made in Italy a prezzi accessibili.',
     images: ['/og-image.jpg'],
   },
   robots: {

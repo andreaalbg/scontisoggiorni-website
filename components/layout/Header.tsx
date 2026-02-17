@@ -37,7 +37,7 @@ const Header = () => {
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-2xl md:text-3xl font-bold font-heading">
               <span className="text-primary">SCONTI</span>
-              <span className="text-secondary">SOGGIORNI</span>
+              <span className="text-secondary">CUCINE</span>
             </div>
           </Link>
 

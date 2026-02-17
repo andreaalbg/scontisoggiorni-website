@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaCouch, FaStar, FaTruck, FaShieldAlt } from 'react-icons/fa'
+import { FaRulerCombined, FaStar, FaTruck, FaShieldAlt } from 'react-icons/fa'
 
 const features = [
-  { icon: FaCouch, text: 'Design Esclusivo' },
+  { icon: FaRulerCombined, text: 'Su Misura' },
   { icon: FaStar, text: 'Made in Italy' },
-  { icon: FaTruck, text: 'Consegna Gratuita' },
+  { icon: FaTruck, text: 'Consegna Inclusa' },
   { icon: FaShieldAlt, text: 'Garanzia 5 Anni' },
 ]
 
@@ -50,13 +50,13 @@ const HeroSection = () => {
 
               {/* Main Title */}
               <h1 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight font-heading">
-                SOGGIORNI DI <span className="text-primary">DESIGN</span> A PREZZI INCREDIBILI
+                Arredare Casa è un&apos;<span className="text-primary">Emozione</span>
               </h1>
 
               {/* Description */}
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Arreda il tuo living con mobili Made in Italy di alta qualità. 
-                Divani, librerie, mobili TV e complementi d&apos;arredo con sconti fino al <span className="text-primary font-bold">45%</span>.
+                Progettiamo cucine su misura che rispecchiano il tuo stile. 
+                Con oltre 40 showroom in Italia, ti accompagniamo nella scelta della cucina perfetta con sconti fino al <span className="text-primary font-bold">45%</span>.
               </p>
 
               {/* CTA Buttons */}
@@ -115,7 +115,7 @@ const HeroSection = () => {
             >
               <Image
                 src={src}
-                alt={`Soggiorno di design ${index + 1}`}
+                alt={`Cucina di design ${index + 1}`}
                 fill
                 className="object-cover"
                 priority={index === 0}
@@ -126,17 +126,6 @@ const HeroSection = () => {
             </motion.div>
           ))}
 
-          {/* Floating Discount Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="absolute top-8 right-8 bg-primary text-white rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-2xl z-10"
-          >
-            <span className="text-sm font-semibold">SCONTO</span>
-            <span className="text-3xl font-bold">-45%</span>
-          </motion.div>
-
           {/* Promo Banner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,11 +135,11 @@ const HeroSection = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-secondary font-bold text-lg">Buono Sconto Immediato</p>
+                <p className="text-secondary font-bold text-lg">Extra Sconto Immediato</p>
                 <p className="text-gray-600">Compilando il modulo ricevi subito</p>
               </div>
               <div className="text-right">
-                <p className="text-primary font-bold text-3xl">1000&euro;</p>
+                <p className="text-primary font-bold text-3xl">2000&euro;</p>
                 <p className="text-gray-500 text-sm">di sconto</p>
               </div>
             </div>

@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { FaCheck } from 'react-icons/fa'
 
 const benefits = [
-  'Arredatore dedicato con progettazione 3D gratuita',
-  'Buono sconto immediato di 1000 Euro',
-  'Trasporto e montaggio sempre inclusi',
-  'Smaltimento vecchi mobili a nostro carico',
-  'Garanzia 5 anni su tutti i prodotti',
-  'Pagamenti personalizzati e finanziamenti',
+  'Progettazione 3D gratuita del tuo ambiente',
+  'Rilievo misure gratuito a domicilio',
+  'Extra sconto immediato fino a 2000 Euro',
+  'Consegna e montaggio sempre inclusi',
+  'Ritiro e smaltimento vecchia cucina',
+  'Finanziamento a interessi zero',
 ]
 
 const WhoWeAre = () => {
@@ -29,7 +29,7 @@ const WhoWeAre = () => {
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero-2.jpg"
-                alt="Showroom Soggiorni"
+                alt="Showroom Cucine"
                 fill
                 className="object-cover"
               />
@@ -63,12 +63,16 @@ const WhoWeAre = () => {
               Chi Siamo
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight font-heading">
-              Il Tuo Living <span className="text-primary">Perfetto</span> Ti Aspetta
+              Su Misura è <span className="text-primary">di Casa</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              Siamo un grande gruppo di produttori e distributori di soggiorni e mobili living 
-              <strong className="text-secondary"> MADE IN ITALY</strong>. La nostra missione è offrire 
-              l&apos;arredamento che desideri al prezzo più conveniente, senza compromessi sulla qualità.
+              Con oltre <strong className="text-secondary">40 showroom</strong> distribuiti in tutta Italia, 
+              siamo il punto di riferimento per chi cerca cucine di qualità <strong className="text-secondary">MADE IN ITALY</strong> a prezzi accessibili. 
+              Selezioniamo le migliori materie prime per garantirti prodotti che durano nel tempo.
+            </p>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              La nostra missione è semplice: accompagnarti nella scelta della cucina perfetta, 
+              con una consulenza personalizzata e servizi pensati per rendere l&apos;esperienza d&apos;acquisto semplice e senza pensieri.
             </p>
 
             {/* Benefits List */}
@@ -95,7 +99,7 @@ const WhoWeAre = () => {
               href="#catalog"
               className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary-dark text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Scopri di Più
+              Scopri le Cucine
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

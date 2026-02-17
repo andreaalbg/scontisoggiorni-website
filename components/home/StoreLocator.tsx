@@ -32,11 +32,11 @@ const StoreLocator = () => {
               I Nostri Showroom
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight font-heading">
-              Vieni a Trovarci in uno dei <span className="text-primary">40+ Showroom</span>
+              Vieni a <span className="text-primary">Trovarci</span>
             </h2>
             <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              Tocca con mano la qualità dei nostri soggiorni. Un arredatore dedicato ti accompagnerà 
-              nella scelta del living perfetto per la tua casa, con progettazione 3D gratuita.
+              Oltre 40 showroom distribuiti in tutta Italia, pronti ad accoglierti con consulenti esperti 
+              e un&apos;ampia esposizione di cucine. Prenota la tua visita gratuita e scopri la cucina perfetta per te.
             </p>
 
             {/* Features Grid */}
@@ -90,9 +90,9 @@ const StoreLocator = () => {
           >
             {/* Image with Map Overlay */}
             <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
-              <Image
+                <Image
                 src="/images/hero-1.jpg"
-                alt="Showroom Soggiorni"
+                alt="Showroom Cucine"
                 fill
                 className="object-cover"
               />

@@ -8,25 +8,25 @@ import Image from 'next/image'
 const testimonials = [
   {
     id: 1,
-    name: 'Marco Bianchi',
+    name: 'Francesca Bianchi',
     location: 'Milano',
-    text: 'Soggiorno fantastico! Ottima qualità e servizio di montaggio efficientissimo. I ragazzi che sono venuti per montare la parete attrezzata sono stati bravissimi e gentilissimi. Lavoro fatto con cura, precisione e pulizia.',
+    text: 'Esperienza fantastica! Il consulente è stato pazientissimo e mi ha aiutata a trovare la cucina perfetta per il mio appartamento. La consegna è stata puntuale e il montaggio impeccabile. Consigliatissimo!',
     rating: 5,
     image: '/images/hero-1.jpg',
   },
   {
     id: 2,
-    name: 'Giulia Ferrero',
+    name: 'Marco Verdi',
     location: 'Roma',
-    text: 'Personale qualificato, gentilissimo, disponibile. Sin da subito ci siamo trovati benissimo. Grande cortesia e impegno per accogliere le nostre esigenze su come comporre il nostro living e quali colori abbinare.',
+    text: 'Ho apprezzato molto il servizio di rilievo misure a domicilio e la progettazione 3D. Vedere la cucina nel mio ambiente prima dell\'acquisto mi ha tolto ogni dubbio. Qualità eccellente e prezzo competitivo.',
     rating: 5,
     image: '/images/hero-2.jpg',
   },
   {
     id: 3,
-    name: 'Alessandro Rossi',
+    name: 'Anna Colombo',
     location: 'Torino',
-    text: 'Esperienza eccellente dall\'inizio alla fine. L\'arredatore ci ha seguito passo passo nella scelta del soggiorno perfetto. Consegna puntuale e montaggio impeccabile. Super consigliato!',
+    text: 'Terzo acquisto in questo showroom e sempre soddisfatta. Il ritiro della vecchia cucina è stato comodo e veloce. La nuova cucina è ancora più bella di come appariva nei rendering. Top!',
     rating: 5,
     image: '/images/hero-3.jpg',
   },
@@ -98,7 +98,7 @@ const Testimonials = () => {
               Testimonianze
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-12 leading-tight font-heading">
-              Cosa Dicono i <span className="text-primary">Nostri Clienti</span>
+              Cosa Dicono <span className="text-primary">di Noi</span>
             </h2>
 
             {/* Testimonial Content */}

@@ -11,13 +11,13 @@ const services = [
   },
   {
     icon: FaGift,
-    title: 'Buono 1000€',
+    title: 'Extra Sconto 2000€',
     description: 'Sconto immediato garantito',
   },
   {
     icon: FaBolt,
-    title: 'Promo Attive',
-    description: 'Sconti su complementi',
+    title: 'Promo Elettrodomestici',
+    description: 'Sconti su tutti i brand',
   },
   {
     icon: FaClock,
@@ -26,8 +26,8 @@ const services = [
   },
   {
     icon: FaCalendarCheck,
-    title: 'Visita Gratuita',
-    description: 'Prenota il tuo appuntamento',
+    title: 'Rilievo Misure',
+    description: 'Gratuito a domicilio',
   },
   {
     icon: FaShieldAlt,
@@ -40,7 +40,7 @@ const highlights = [
   { number: '40+', label: 'Showroom in Italia' },
   { number: '15K+', label: 'Clienti Soddisfatti' },
   { number: '5', label: 'Anni di Garanzia' },
-  { number: '1000€', label: 'Buono Sconto' },
+  { number: '2000€', label: 'Extra Sconto' },
 ]
 
 const ServicesGrid = () => {
@@ -88,15 +88,15 @@ const ServicesGrid = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-              Perché Sceglierci
+              I Nostri Servizi
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight font-heading">
-              Qualità, Convenienza e <span className="text-primary">Servizio Eccellente</span>
+              Sempre al Tuo <span className="text-primary">Fianco</span>
             </h2>
             <p className="text-white/80 text-lg leading-relaxed mb-8">
-              Da anni aiutiamo migliaia di famiglie italiane ad arredare la propria casa con mobili 
-              di qualità a prezzi accessibili. Il nostro segreto? Rapporti diretti con i migliori 
-              produttori italiani e un servizio clienti dedicato.
+              Dall&apos;ideazione alla consegna, ti accompagniamo in ogni fase con servizi pensati 
+              per rendere l&apos;acquisto della tua cucina un&apos;esperienza semplice e senza pensieri. 
+              Dal rilievo misure alla consegna, siamo sempre al tuo fianco.
             </p>
             
             <div className="flex flex-wrap gap-4">

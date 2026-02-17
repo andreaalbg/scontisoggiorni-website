@@ -7,29 +7,29 @@ import { FaArrowRight } from 'react-icons/fa'
 const products = [
   {
     id: 1,
-    title: 'Soggiorno Moderno',
-    subtitle: 'Linee pulite e design contemporaneo',
-    discount: '-45%',
+    title: 'Cucine Moderne',
+    subtitle: 'Linee essenziali e design pulito',
+    discount: 'Extra Sconto fino a 2.000€',
     image: '/images/hero-1.jpg',
-    features: ['Pareti attrezzate', 'Mobili TV', 'Librerie'],
+    features: ['Design contemporaneo', 'Top in quarzo', 'Elettrodomestici inclusi'],
     large: true,
   },
   {
     id: 2,
-    title: 'Soggiorno Minimal',
-    subtitle: 'Essenzialità e funzionalità',
-    discount: '-40%',
+    title: 'Cucine Classiche',
+    subtitle: 'Eleganza intramontabile',
+    discount: 'Progettazione 3D Gratuita',
     image: '/images/hero-2.jpg',
-    features: ['Design scandinavo', 'Colori neutri', 'Spazi aperti'],
+    features: ['Legno massello', 'Finiture artigianali', 'Stile italiano'],
     large: false,
   },
   {
     id: 3,
-    title: 'Soggiorno Luxury',
-    subtitle: 'Eleganza senza compromessi',
-    discount: '-35%',
+    title: 'Cucine Su Misura',
+    subtitle: 'Personalizzate per te',
+    discount: 'Interessi Zero',
     image: '/images/hero-3.jpg',
-    features: ['Materiali pregiati', 'Finiture esclusive', 'Personalizzabile'],
+    features: ['Configurazione libera', 'Oltre 100 finiture', 'Consegna inclusa'],
     large: false,
   },
 ]
@@ -48,14 +48,15 @@ const ProductShowcase = () => {
         >
           <div>
             <span className="inline-block text-primary font-semibold text-sm uppercase tracking-wider mb-4">
-              Le Nostre Collezioni
+              Le Nostre Cucine
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary font-heading">
-              Sconti del Mese
+              Lasciati Ispirare
             </h2>
           </div>
           <p className="text-gray-600 max-w-md mt-4 md:mt-0">
-            Scopri le nostre offerte esclusive su soggiorni di design Made in Italy
+            Scopri le nostre collezioni pensate per ogni stile. Ogni cucina è un invito a creare, 
+            progettata per trasformare il cuore della tua casa.
           </p>
         </motion.div>
 
@@ -99,7 +100,7 @@ const ProductShowcase = () => {
                 </div>
 
                 <button className="inline-flex items-center gap-2 bg-white text-secondary font-bold py-3 px-6 rounded-full group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  Scopri la Collezione
+                  Richiedi Informazioni
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </div>
