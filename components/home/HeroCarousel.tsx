@@ -126,25 +126,6 @@ const HeroSection = () => {
             </motion.div>
           ))}
 
-          {/* Promo Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl z-10"
-          >
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-secondary font-bold text-lg">Extra Sconto Immediato</p>
-                <p className="text-gray-600">Compilando il modulo ricevi subito</p>
-              </div>
-              <div className="text-right">
-                <p className="text-primary font-bold text-3xl">2000&euro;</p>
-                <p className="text-gray-500 text-sm">di sconto</p>
-              </div>
-            </div>
-          </motion.div>
-
           {/* Image Navigation Dots */}
           <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
             {images.map((_, index) => (
